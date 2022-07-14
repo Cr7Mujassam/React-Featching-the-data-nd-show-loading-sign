@@ -8,9 +8,11 @@ function App() {
   const [height,setheight] = useState('');
   const [isLoading,setisLoading] = useState(false);
 
+  //Get Method in React
   function fetchMovieHandler(){
     setisLoading(true);
     fetch('https://swapi.py4e.com/api/people/1/').then(response =>{
+      //json will put the data into browser
       return response.json();
     }).then(data =>{
       setperson(data.name);
